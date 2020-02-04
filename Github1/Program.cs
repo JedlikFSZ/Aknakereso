@@ -8,10 +8,16 @@ namespace Github1
 {
     class Program
     {
+        char[,] Tábla = new char[10,10];
         static void Main(string[] args)
         {
-            Console.WriteLine("Nacsá gucci gang");
+            Feltöltés();   
+
             Console.ReadKey();
         }
+        static void Feltöltés()
+            {
+
+            }
     }
 }
