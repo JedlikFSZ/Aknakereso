@@ -19,12 +19,12 @@ namespace Github1
         }
         static void Feltöltés(char[,]Tábla)
         {
-            for (int sor = 0; sor < pálya.GetLength(0); sor++)
+            for (int sor = 0; sor < Tábla.GetLength(0); sor++)
             {
 
-                for (int oszlop = 0; oszlop < pálya.GetLength(1); oszlop++)
+                for (int oszlop = 0; oszlop < Tábla.GetLength(1); oszlop++)
                 {
-                    pálya[sor, oszlop] = '_';
+                    Tábla[sor, oszlop] = '_';
                 }
             }
             Random gép = new Random();
@@ -36,8 +36,8 @@ namespace Github1
                 {
                     x = gép.Next(1, 10);
                     x2 = gép.Next(1, 10);
-                } while (pálya[x, x2] == '_');
-                pálya[x, x2] = 'B';
+                } while (Tábla[x, x2] == 'B');
+                Tábla[x, x2] = 'B';
              }
 
         }
@@ -45,11 +45,11 @@ namespace Github1
         {
             Console.BackgroundColor = ConsoleColor.DarkBlue;
             Console.ForegroundColor = ConsoleColor.White;
-            for (int sor = 0; sor < pálya.GetLength(0); sor++)
+            for (int sor = 0; sor <Tábla.GetLength(0); sor++)
             {
-                for (int oszlop = 0; oszlop < pálya.GetLength(1); oszlop++)
+                for (int oszlop = 0; oszlop < Tábla.GetLength(1); oszlop++)
                 {
-                    Console.Write($"{pálya[sor, oszlop]}|");
+                    Console.Write($"{Tábla[sor, oszlop]}|");
                 }
                 Console.WriteLine();
             }
