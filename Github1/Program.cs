@@ -27,6 +27,19 @@ namespace Github1
                     pálya[sor, oszlop] = '_';
                 }
             }
+            Random gép = new Random();
+            int x2;
+            int x;
+             for (int sor = 0; sor < 10; sor++)
+             {
+                do
+                {
+                    x = gép.Next(1, 10);
+                    x2 = gép.Next(1, 10);
+                } while (pálya[x, x2] == '_');
+                pálya[x, x2] = 'B';
+             }
+
         }
         static void Kirajzoló(char[,]Tábla)
         {
